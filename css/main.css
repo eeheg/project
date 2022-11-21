@@ -1,0 +1,309 @@
+@font-face {
+    font-family: 'Pilat Extended Demi';
+    src: url('/project/font/PilatExtended-DemiBold.ttf');
+    font-style: normal;
+}
+
+* {
+    font-family: 'Pilat Extended Demi';
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* 스크롤 바 넓이 16px */
+::-webkit-scrollbar{width: 12px;}
+/* 스크롤 바 기본 색상 */
+::-webkit-scrollbar-track {background-color:#888;}
+/* 스크롤 구간 배경 색상 */
+::-webkit-scrollbar-thumb {background-color:rgba(81,232,239,0.5);} 
+/* 스크롤 바 위에 마우스 올렸을 때(hover) 색상 */
+::-webkit-scrollbar-thumb:hover {background-color: rgba(81,232,239,0.3);} 
+/* 스크롤 상하단 버튼 넓이와 색상 */
+::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment {
+width:16px; height:16px; background-color: rgb(81,232,239);
+} 
+
+
+body {
+    background-color: #010202;
+    background-image: url('/project/img/bikewebView.png');
+    background-repeat: no-repeat;
+}
+
+#wrap {
+    width: 1700px;
+    margin: 50px 80px 20px 80px;
+}
+header {
+    display: flex;
+    width: 100%;
+    height: 55px;
+}
+header > .logo {
+    margin-right: 900px;
+    width: 215px;
+    height: 100%;
+    background-image: url('/project/img/logo.png');
+    background-repeat: no-repeat;
+    background-position: 0px 5px;
+    cursor: pointer;
+}
+.logo:hover {
+    background-image: url('/project/img/logo_hover.png');
+    transition:500ms;
+}
+.logo > span1 {
+    color: #ffffff;
+    float: right;
+    font-size: 24px;
+    font-weight: 200;
+    letter-spacing: 0.07em;
+}
+.logo > span2 {
+    color: rgb(81,232,239);
+    float: right;
+    letter-spacing: 0.76em;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.headmenu > ul {
+    line-height: 55px;
+    display: flex;
+    color: rgba(255,255,255,0.6);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 900;
+}
+.headmenu > ul >li {
+    margin-left: 70px;
+    text-align: center;
+    width: 120px;
+    height: 35px;
+    cursor: pointer;
+}
+.headmenu > ul >li:hover {
+    color: rgba(81,232,239,0.8);
+    transition: 300ms;
+    font-weight: bolder;
+    font-size:105%;
+}
+
+main {
+    display: flex;
+}
+
+.content0 {
+    width: 420px;
+    margin-top: 250px;
+    margin-bottom: 100px;
+    margin-right: 400px;
+}
+.content > div1 { /*oddyssey*/
+    font-size: 64px;
+    font-weight: 450;
+    color:#ffffff;
+    width: 100%;
+}
+.content > div2 { /*one*/
+    font-size: 96px;
+    font-weight: 900;
+    color:rgb(81,232,239);
+    width: 100%;
+}
+.content > div3 { /*lorem~ text*/
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 15px;
+    color:#ffffff;
+    opacity: 0.6;
+    width: 100%;
+}
+.buyone { /*buyone*/
+    position: relative;
+    width: 200px;
+    height: 60px;
+    color:#ffffff;
+    font-size: 16px;
+    line-height: 60px;
+    font-weight: 900;
+    text-align: center;
+    border-radius: 26px;
+    border: 2px solid rgb(81,232,239);
+    margin-top: 50px;
+    margin-left: 0;
+    transition-duration: 700ms;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+.buyone::after,
+.buyone::before {
+    background-color: black;
+    content: "";
+    display: block;
+    height: 25px;
+    width: 85px;
+    position: absolute;
+
+}
+.buyone::before {
+    top: -5px;
+    right: -5px;
+}
+.buyone::after {
+    bottom: -5px;
+    left: -5px;
+}
+.buyone:hover {
+    color: rgb(81,232,239);
+    font-size:large;
+    font-weight: bolder;
+}
+.buyone:hover::before,
+.buyone:hover::after {
+    width: 0;
+    transform: translateX(-50%);
+    transition: 800ms;
+}
+
+.byc {
+    width: 700px;
+    height: 500px;
+    margin-top: 80px;
+}
+.byc > .box {
+    display: flex;
+}
+.before_hover_hand, .before_hover_center, .before_hover_chair, .before_hover_motor, .before_hover_wheel {
+    width: 390px;
+    z-index: 0;
+    position: absolute;
+}
+.circle {
+    position: relative;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: rgba(2,8,8,0.5);
+}
+.arrow {
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    top: 50%; left: 50%;
+    margin: -25px 0 0 -25px;
+    transform: rotate(-45deg);
+    border: 2px dashed rgb(81,232,239);
+}
+.overlay {
+    position: absolute;
+    background-color: rgba(81,232,239,0.36);
+    width:26px;
+    height: 26px;
+    top: 50%; left: 50%;
+    margin: -13px 0 0 -13px;
+}
+
+.byc_hand, .byc_chair, .byc_center, .byc_wheel, .byc_motor {
+    display: flex;
+    z-index: 1;
+    width: 390px;
+    height: 120px;
+    border-radius: 60px;
+    background-color: rgba(2,8,8,0.72);
+    position: relative;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.byc_hand:hover, .byc_chair:hover, .byc_center:hover, .byc_wheel:hover, .byc_motor:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.byc_hand, .before_hover_hand {
+    transform: translate(340px, -15px);
+}
+.byc_chair, .before_hover_chair {
+    transform: translate(20px, 20px);
+}
+.byc_center, .before_hover_center {
+    transform: translate(200px, 110px);
+}
+.byc_wheel, .before_hover_wheel {
+    transform: translate(520px, -225px);
+}
+.byc_motor, .before_hover_motor {
+    transform: translate(-120px, 85px);
+}
+.circle2 {
+    position: relative;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.arrow2 {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    top: 50%; left: 50%;
+    margin: -30px 0 0 -30px;
+    transform: rotate(-45deg);
+    border: 2px dashed rgb(81,232,239);
+}
+.overlay2 {
+    position: absolute;
+    background-color: rgba(81,232,239,0.6);
+    width:20px;
+    height: 20px;
+    top: 50%; left: 50%;
+    margin: -10px 0 0 -10px;
+}
+.byc_text {
+    margin: auto;
+    margin-left: 20px;
+    width: 220px;
+}
+.byc_text1 {
+    line-height: 25px;
+    color: rgba(255,255,255,0.6);
+    font-size: 12px;
+}
+.byc_text2 {
+    color: rgb(255,255,255);
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.bottom {
+    width: 100%;
+    height: 100px;
+}
+.bottom > ul {
+    margin-top: 27px;
+    display: flex;
+    float: right;
+}
+.bottom > ul > li {
+    border-left: 2px solid #51E8EF;
+    padding-left: 15px;
+    margin-left: 350px;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.6);
+}
+.bottom > ul > li:before {
+    transform: rotate (45deg);
+}
+.bottom_ex_top {
+    font-size: 12px;
+}
+.bottom_ex_bottom{
+    font-size: 16px;
+    font-weight: 900;
+}
+
+
